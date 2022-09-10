@@ -7,6 +7,7 @@
  */
 int main(void)
 {
+	int num = 0;
 	int num;
 
 	while (1)
@@ -20,14 +21,10 @@ int main(void)
 			else
 			{
 				putchar(44);
-				putchar(32);
 			}
 			num++;
-
 				continue;
 
-
-			putchar(',');
 			putchar(',');
 		}
 
@@ -35,3 +32,4 @@ int main(void)
 
 	return (0);
 }
+
