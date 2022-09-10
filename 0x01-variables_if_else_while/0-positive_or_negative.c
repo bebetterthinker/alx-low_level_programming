@@ -3,11 +3,9 @@
 #include <stdlib.h>
 
 /**
- * main - Prints a random number and states whether
- * it is positive, negative, or zero
+ *  main - Entry point
  *
- * Return: 0 if successful, non-zero otherwise.
- * Return: Always 0.
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
