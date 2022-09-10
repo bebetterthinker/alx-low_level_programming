@@ -14,7 +14,18 @@ int main(void)
 		{
 			putchar((num % 10) + '0');
 			if (num == 9)
+			{
+				break;
+			}
+			else
+			{
+				putchar(44);
+				putchar(32);
+			}
+			num++;
+
 				continue;
+
 
 			putchar(',');
 			putchar(',');
