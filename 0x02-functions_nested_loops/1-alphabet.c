@@ -8,6 +8,12 @@
  */
 void print_alphabet(void)
 {
+	/**
+	 * Function:print_alphabet
+	 * Returns the smallest alphabet of english letter
+	 *
+	 * returns: the the letter a to z
+	 */
 	char n;
 
 	for (n = 'a'; n <= 'z'; n++)
