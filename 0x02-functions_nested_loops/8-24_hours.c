@@ -4,7 +4,6 @@
  * jack_bauer - function that prints every minute of the day, 24 hour clock
  * h = hour, m = minutes
  * for loop breaks before passing 24:00
- * for loop breaks before passing 24:00
  */
 void jack_bauer(void)
 {
