@@ -9,9 +9,7 @@
 int _islower(int c)
 {
 	f(c >= 'a' && c <= 'z')
-	{
 		return (1);
-	}
 	else
 		return (0);
 }
