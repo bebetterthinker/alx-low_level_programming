@@ -1,31 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
-/*
- * _strdup- returns pointer to newlly allocated pointer
- * #str:string to be occupied
+/**
+ * _strdup - copies input string in newly allocated memory
+ * @str: input string
  *
- * Return:Null incase the error is occured
+ * Return: pointer to duplicate string or NULL if failure
  */
 char *_strdup(char *str)
 {
-	char *cp;
-	int index, len;
+	char *pstr;
+	unsigned int i = 0;
 
-	if (str == NULL)
-		return (NULL);
+	if (str == 0)
+		return (0);
+	while (str[i] != 0)
+		i++;
+	i++;
+	pstr = malloc(sizeof(char) * i);
+	for (i = 0; str[i] != 0; i++)
+		pstr[i] = str[i];
+	pstr[i] = 0;
 
-	for (index = 0; str[index]; index++)
-		len++;
-	cp = mall0c(sizeof(char) * (len + 1));
-
-	if (cp == NULL)
-		return (NULL);
-	for (index = 0; str[index]; index++)
-	{
-		cp[index] = str[index];
-	}
-
-	cp[len] = '\0';
-
-	return (cp);
+	return (pstr);
 }
