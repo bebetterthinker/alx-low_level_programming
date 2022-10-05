@@ -1,36 +1,35 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
 
 /**
- * str_concat - concatenates two strings
- * @s1: input string 1
- * @s2: input string 2
+ * *str_concat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
  *
- * Return: pointer to newly allocated space in memory with both strings or NULL
+ * Return: pointer to string or NULL if failure
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *pstr;
-	unsigned int len1 = 0, len2 = 0, i, j;
+	char *c;
+	int i, k;
 
-	if (s1 == 0)
+	if (s1 == NULL)
 		s1 = "";
-	if (s2 == 0)
+	if (s2 == NULL)
 		s2 = "";
-	while (s1[len1] != 0)
-		len1++;
-	while (s2[len2] != 0)
-		len2++;
+	for (i = 0; *(s1 + i) != '\0'; i++)
+		;
+	for (k = 0; *(s2 + k) != '\0'; k++)
+		;
+	c = malloc(i + k + 1);
+	if (c == 0)
+		return (NULL);
+	for (i = 0; *(s1 + i) != '\0'; i++)
+		c[i] = *(s1 + i);
+	for (k = 0; *(s2 + k) != '\0'; k++)
+		c[i + k] = *(s2 + k);
+	c[i + k] = *(s2 + k);
 
-	len2++;
-	pstr = malloc(sizeof(char) * (len1 + len2));
-	for (i = 0; i < len1; i++)
-		pstr[i] = s1[i];
-
-	for (j = 0; j < len2; i++, j++)
-		pstr[i] = s2[j];
-
-	return (pstr);
+	return (c);
 }
-
